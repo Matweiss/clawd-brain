@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+.dark {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgb(var(--background-end-rgb))
+  ) rgb(var(--background-start-rgb));
+}
+
+/* Markdown styles */
+.markdown h1 { @apply text-3xl font-bold mb-4; }
+.markdown h2 { @apply text-2xl font-semibold mb-3 mt-6; }
+.markdown h3 { @apply text-xl font-semibold mb-2 mt-4; }
+.markdown p { @apply mb-4 leading-relaxed; }
+.markdown ul { @apply list-disc pl-6 mb-4; }
+.markdown ol { @apply list-decimal pl-6 mb-4; }
+.markdown code { @apply bg-gray-100 dark:bg-gray-800 px-1 py-0.5 rounded text-sm; }
+.markdown pre { @apply bg-gray-100 dark:bg-gray-800 p-4 rounded-lg mb-4 overflow-x-auto; }
+.markdown blockquote { @apply border-l-4 border-blue-500 pl-4 italic; }
+.markdown a { @apply text-blue-600 hover:underline; }
+.markdown table { @apply w-full border-collapse mb-4; }
+.markdown th { @apply border border-gray-300 px-4 py-2 bg-gray-100 font-semibold; }
+.markdown td { @apply border border-gray-300 px-4 py-2; }
